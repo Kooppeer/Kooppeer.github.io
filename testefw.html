@@ -6,7 +6,7 @@
 	
 		*{padding:0px; margin:0px;}
 		a{text-decoration:none;color:white;display:block;padding:20px 5px;}
-		a:hover{background-color:#32CD32;color:#808000;}
+		.linkmenu:hover{background-color:#32CD32;color:#808000;}
 		body{font-family:Times New Roman;}
 		ul{list-style:none;}
 		.menu{width:100px;}
@@ -19,6 +19,15 @@
 		.logo{width:100px;margin-bottom:30px;margin-top:-20px;margin-left:500px;}
 		.titulodapag{margin:100px;margin-top:-105px;margin-left:620px;font-size:40px;color:#008000;}
 		
+		.imagens{display:block;}
+		.imagens1{height:550px;display:block;}
+		.imagens2{display:block;width:530px;margin-top:100px;}
+		.imagens3{display:block;width:530px;}
+		.section1{margin:0 auto;max-width:500px;}
+		.section2{display:grid;grid-template-columns:repeat(2, 1fr);margin:0 auto;max-width:500px;}
+		.div:nth-child(1){grid-row:1/4;}
+		
+		
 	</style>
 </head>
 <body>
@@ -29,10 +38,10 @@
 		</label>
 		<nav>
 			<ul>
-				<li><a href="index.html">Página Inicial</a></li>
-				<li><a href="oc.html">Covid-19 x Worms</a>
-				<li><a href="mmm.html">Tecnologias</a>
-				<li><a href="sobre.html">Sobre</a></li>
+				<li><a href="index.html" class="linkmenu">Página Inicial</a></li>
+				<li><a href="sms.html" class="linkmenu">Tecnologia</a>
+				<li><a href="mmm.html" class="linkmenu">Dispositivos</a>
+				<li><a href="sobre.html" class="linkmenu">Sobre</a></li>
 			</ul>
 		</nav>
 		<!--Fim menu-->
@@ -40,6 +49,23 @@
 		<!--Título e logo-->
 		<img src="imagens/logo2.png" class="logo">
 		<h2 class="titulodapag">TechnoCovid</h2>
+		
+		<!--Começo Grid-->
+		
+		<section class="section1"><div class="div"><a href="onda.html"><img src="imagens/banner5.png" class="imagens2"></a></div></section>
+		
+		<section class="section2">
+		
+			<div class="div"><a href="saude.html"><img src="imagens/banner1.png" class="imagens1"></a></div>
+			<div class="div"><a href="sintomas.html"><img src="imagens/banner2.png" class="imagens"></a></div>
+			<div class="div"><a href="fake-news.html"><img src="imagens/banner3.png" class="imagens"></a></div>
+			<div class="div"><a href="oc.html"><img src="imagens/banner4.png" class="imagens"></a></div>
+				
+		</section>
+		
+		<section class="section1"><div class="div"><a href="vacina.html"><img src="imagens/banner6.png" class="imagens3"></a></div></section>
+		
+		<!--Fim Grid-->
 	
 </body>
 </html>

@@ -1,45 +1,105 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Página Inicial</title>
 	<style>
-	
-		body, ul, li{padding:0px;margin:0px;font-family:Times New Roman;}
-		#div1{background-color:#00FA9A;}
-		.icon{width:70px;}
-		input[type="checkbox"]{display: none;}
-		nav{width:250px;height:350px;background-color:#32CD32;position:absolute;left:-250px;}
-		input[type="checkbox"]:checked ~ nav
-		{
-			transform:translateX(250px);position:relative;
-		}
-		ul{top:100px;position:absolute;width:100%;}
-		a{display: block;padding:20px 5px;color:white;text-decoration:none;}
-		a:hover{background-color:#8FBC8F;color:#7FFF00;}
+
+		*{padding:0px; margin:0px;}
+		a{text-decoration:none;color:white;display:block;padding:20px 5px;}
+		.linkmenu:hover{background-color:#32CD32;color:#808000;}
+		body{font-family:'Times New Roman';}
+		ul{list-style:none;}
+		.menu{width:100px;}
+		input[type="checkbox"]{display:none;}
+		nav{background-color:#006400;width:250px;height:600px;position:absolute;left:-250px;}
+		input[type="checkbox"]:checked ~ nav{transform:translateX(250px);}
+		ul{top:160px;position:absolute;width:100%;}
 		label{padding:15px;position:absolute;z-index:1;}
 		
+		.logo{width:100px;margin-bottom:30px;margin-top:-20px;margin-left:500px;}
+		.titulodapag{margin:100px;margin-top:-105px;margin-left:620px;font-size:40px;color:#008000;}
+		
+		.imagens{display:block;}
+		.imagens1{height:550px;display:block;}
+		.imagens2{display:block;width:530px;margin-top:100px;}
+		.imagens3{display:block;width:530px;}
+		.section1{margin:0 auto;max-width:500px;}
+		.section2{display:grid;grid-template-columns:repeat(2, 1fr);margin:0 auto;max-width:500px;}
+		.div:nth-child(1){grid-row:1/4;}
+        .mobilelogo{display: none; width: 10vw; margin-left: 32vw ;margin-right: auto; margin-bottom: -0vw;}
+		.titulodapagmobile{display: none; }
+		@media all and (max-width: 1330px) {
+		     .logo{
+				 display: none !important; 
+				 
+				
+			 }
+			 .mobilelogo{
+				 display: block !important;
+				 
+			 }
+
+			 .titulodapag {
+
+				 display: none;
+			 }
+			 .titulodapagmobile{
+
+                
+				 display: block !important;
+				 margin:10vw !important;
+				 margin-top:-7vw !important;
+				 margin-left:45vw !important;
+				 font-size:4vw !important;
+				 color:#008000 !important;}
+		}
+		
+
+
+
+		
 	</style>
-	
 </head>
 <body>
-	<!--Menu e barra-->
-	<div id="div1">
-		<input type="checkbox" id="chec">
-		<label for="chec">
-			
-				<img src="imagens/menu.png" class="icon">
-			
+		<!--Começo menu-->
+		<input type="checkbox" id="check">
+		<label for="check">
+		<img src="imagens/menu.png" class="menu">
 		</label>
-	</div>
-	<nav>
-			<ul class="menu">
-				<li><a href="#">Página Inicial</a></li>
-				<li><a href="#">Covid-19 x Worms</a></li>
-				<li><a href="#">Tecnologias</a></li>
-				<li><a href="#">Sobre</a></li>
+		<nav>
+			<ul>
+				<li><a href="index.html" class="linkmenu">Página Inicial</a></li>
+				<li><a href="sms.html" class="linkmenu">Tecnologia</a>
+				<li><a href="mmm.html" class="linkmenu">Dispositivos</a>
+				<li><a href="sobre.html" class="linkmenu">Sobre</a></li>
 			</ul>
-	</nav>
+		</nav>
+		<!--Fim menu-->
+		
+		<!--Título e logo-->
+		<img src="imagens/logo2.png" class="mobilelogo">
+		<img src="imagens/logo2.png" class="logo">
+		<h2 class="titulodapag">TechnoCovid</h2>
+		<h2 class="titulodapagmobile">TechnoCovid</h2>
+		
+		<!--Começo Grid-->
+		
+		<section class="section1"><div class="div"><a href="onda.html"><img src="imagens/banner5.png" class="imagens2"></a></div></section>
+		
+		<section class="section2">
+		
+			<div class="div"><a href="saude.html"><img src="imagens/banner1.png" class="imagens1"></a></div>
+			<div class="div"><a href="sintomas.html"><img src="imagens/banner2.png" class="imagens"></a></div>
+			<div class="div"><a href="fake-news.html"><img src="imagens/banner3.png" class="imagens"></a></div>
+			<div class="div"><a href="oc.html"><img src="imagens/banner4.png" class="imagens"></a></div>
+				
+		</section>
+		
+		<section class="section1"><div class="div"><a href="vacina.html"><img src="imagens/banner6.png" class="imagens3"></a></div></section>
+		
+		<!--Fim Grid-->
 	
 </body>
 </html>
